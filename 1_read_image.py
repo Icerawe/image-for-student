@@ -1,10 +1,9 @@
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
+import cv2
 # Load the image
-image_path = 'image/6jZ1RNDmJb.JPG'
-img = mpimg.imread(image_path)
-
+img = mpimg.imread("image/6jZ1RNDmJb.JPG")
 # Plot the image
 plt.imshow(img)
 

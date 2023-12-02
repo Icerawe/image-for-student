@@ -1,10 +1,33 @@
-import matplotlib.pyplot as plt
+# pip install matplotlib
+
 import numpy as np
+import matplotlib.pyplot as plt
 
-# Define the image array
-x = []
-x = np.array(x, dtype=np.uint8)  # Correct dtype
+image = [
+    [
+        [255, 10, 20], [25, 255, 50]
+    ],
+    [
+        [255, 0, 255], [0, 255, 150]
+    ]
+]
 
-# Display the image using matplotlib
-plt.imshow(x, cmap="gray")  # Corrected argument name
+x = np.array(image, dtype=np.uint8)
+print(x)
+
+plt.imshow(x, cmap="gray")
+plt.show()
+
+new_image = []
+for i in image:
+    avg = []
+    for j in i:
+        avg.append(sum(j)/len(j))
+    new_image.append(avg)
+
+print(new_image)
+x = np.array(new_image, dtype=np.uint8)
+print(x)
+
+plt.imshow(x, cmap="gray")
 plt.show()

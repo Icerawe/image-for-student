@@ -1,0 +1,1 @@
+# convert images to gray scale using average
